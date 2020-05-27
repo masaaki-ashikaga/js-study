@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title></title>
+    <title>タイトルを書き換えよう</title>
 
     <link rel="stylesheet" href="../assets/style.css">
 </head>
@@ -14,8 +14,20 @@
 
         <div class="frame__inner">
             <!-- ここに、JavaScriptを記述します -->
+            <div id="time">10:23:45</div>
             <script>
-                document.write('JavaScriptを勉強中です。');
+                // document.write('JavaScriptを勉強中です。');
+
+                const today = new Date();
+                let hour = today.getHours();
+                let min = today.getMinutes();
+                let second = today.getSeconds();
+                document.write(`${hour}時 ${min}分 ${second}秒`);
+
+                let display = document.getElementById('time');
+                display.innerHTML = '10時23分45秒';
+
+                document.title = '(1)' + document.title;
             </script>
         </div>
     </div>
