@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title></title>
+
+    <link rel="stylesheet" href="../assets/style.css">
+</head>
+
+<body>
+    <div class="frame">
+        <h1 class="frame__title">JavaScript</h1>
+
+        <div class="frame__inner">
+            <!-- ここに、JavaScriptを記述します -->
+            <script>
+                // \d で数字のみ
+                // {3} 桁数の指定
+                // -? ハイフンを0個 or 1個記載
+                // ^ はここが最初（この前には入力されていない）
+                // $ はここが最後（この後には入力されていない）
+                // 正規表現は/   /g で記載する決まり
+                const zip_pattern = /^\d{3}-?\d{4}$/g;
+                let zip = '123-4567';
+                if(zip_pattern.test(zip) === true){
+                    document.write('正しく入力されました。');
+                } else{
+                    document.write('郵便番号はxxx-xxxxの書式で入力して下さい。');
+                }
+
+            </script>
+        </div>
+    </div>
+</body>
+
+</html>
